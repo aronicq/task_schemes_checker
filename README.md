@@ -70,5 +70,3 @@ Scan is over
 Reading file: ./task_folder/event/6b1984e5-4092-4279-9dce-bdaa831c7932.json
 event name meditation_created is not right. Did you mean cmarker_created?
 Сhange event_name in file or add corresponding schema to task_folder/schema folder
-
-Process finished with exit code 0
