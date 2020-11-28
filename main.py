@@ -70,7 +70,8 @@ class Schema:
                 for sub_v in v:
                     self.check_required(schema['properties'][k]['items'], sub_v)
 
-    def translate_type(self, type_list, k):
+    @staticmethod
+    def translate_type(type_list, k):
         result = []
         if type(type_list) is not list:
             type_list = [type_list]
@@ -118,11 +119,10 @@ def main():
                          "cmarker_created.schema", "workout_created.schema"])
     files = ['./task_folder/event/' + f for f in os.listdir('./task_folder/event/') if
              os.path.isfile('./task_folder/event/' + f)]
-    i = 0
+
     for file in files:
         print('\nReading file: ' + file)
         print(new_schema.check_event(file))
-        i += 1
 
 
 if __name__ == "__main__":
